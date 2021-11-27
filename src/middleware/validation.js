@@ -1,6 +1,6 @@
 const { body, validationResult } = require("express-validator");
 
-exports.dateValidation = (value) => {
+const dateValidation = (value) => {
   const dateRegex = /^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/;
   const validated = dateRegex.test(value);
   if (!validated) {
@@ -8,6 +8,8 @@ exports.dateValidation = (value) => {
   }
   return Promise.resolve();
 };
+
+exports.dateValidation = dateValidation;
 
 // Validates and sanitazes the body
 exports.recordQueryRequestValidation = () => [
