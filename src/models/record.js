@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
+// Mongoose schema
 const recordSchema = new Schema({
     key: {
         type: String,

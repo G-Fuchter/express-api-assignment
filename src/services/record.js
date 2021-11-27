@@ -1,6 +1,7 @@
 const recordModel = require("../models/record");
 
-// Service: given a range of dates and counts, it returns the records
+// Database Service
+// given a range of dates and counts, it returns the records
 exports.queryRecords = async (startDate, endDate, minCount, maxCount) => {
   const filteredRecords = await recordModel.aggregate([
     {

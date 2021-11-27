@@ -1,8 +1,15 @@
-const recordController =  require("../controllers/record");
-const express = require('express');
+const express = require("express");
+
+const recordController = require("../controllers/record");
+const validator = require("../middleware/validation");
 
 const router = express.Router();
 
-router.post("/", recordController.queryRecords);
+router.post(
+  "/",
+  validator.recordQueryRequestValidation(),
+  validator.validationErrorHandler,
+  recordController.queryRecords
+);
 
 module.exports = router;
