@@ -19,7 +19,7 @@ app.use(recordRouter);
 app.use(errorHandler);
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`app.js listening at http://localhost:${port}`);
 });
 
 module.exports = app;

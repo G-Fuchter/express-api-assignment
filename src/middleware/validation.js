@@ -1,6 +1,6 @@
 const { body, validationResult } = require("express-validator");
 
-const dateValidation = (value) => {
+exports.dateValidation = (value) => {
   const dateRegex = /^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/;
   const validated = dateRegex.test(value);
   if (!validated) {
