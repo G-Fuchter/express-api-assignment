@@ -18,14 +18,14 @@ exports.recordQueryRequestValidation = () => [
     "minCount is required, and must be a number greater or equal to 0"
   )
     .notEmpty()
-    .isNumeric({ min: 0 })
+    .isInt({ min: 0 })
     .toInt(),
   body(
     "maxCount",
     "maxCount is required, and must be a number greater or equal to 0"
   )
     .notEmpty()
-    .isNumeric()
+    .isInt({ min: 0 })
     .toInt(),
   body(
     "startDate",
