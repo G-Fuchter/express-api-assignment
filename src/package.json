@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "npm install --only=prod && npm start"
   },
   "author": "gpfuchter",
   "license": "ISC",
